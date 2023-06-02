@@ -1,15 +1,23 @@
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CounterCard from './components/CounterCard/CounterCard';
+import DigitalClock from './components/ClockTab/ClockTab';
+import SwitchExample from './components/Switch/Switch';
 
 const App = () => {
     return (
-      <div className="App container p-4">
-         <CounterCard />
-         <CounterCard />
-         <CounterCard />
-      </div>
+        <div>
+        <DigitalClock/>
+          <div className='d-flex justify-content-evenly'>
+            <SwitchExample label="12-hour"/>
+            <SwitchExample label="am/pm"/>
+            <SwitchExample label="Seconds"/>
+            <SwitchExample label="Date"/>
+          </div>
+  
+
+        </div>
+       
     );
   }
 
