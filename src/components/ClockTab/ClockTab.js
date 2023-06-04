@@ -21,8 +21,7 @@ const DigitalClock = () => {
             <h1>{clock}</h1>
             <h2>{date}</h2>
             <div className='d-flex justify-content-evenly'>
-                <SwitchBtn label="12-hour"/>
-                <SwitchBtn label="am/pm"/>
+                <SwitchBtn label="12-hour" updateClock={updateClock}/>
                 <SwitchBtn label="Seconds" updateClock={updateClock}/>
                 <SwitchBtn label="Date" updateDate={updateDate}/>
             </div>

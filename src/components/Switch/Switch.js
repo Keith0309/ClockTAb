@@ -9,16 +9,12 @@ const SwitchBtn = (props) => {
  const handleChange = () => {
     setChecked(!checked);
     if (checked === false && props.label === '12-hour' ) {
-
+        const newClockValue = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: true});
+          updateClock(newClockValue);
     }
-    else {
-
-    }
-    if (checked === false && props.label === 'am/pm' ) {
-      console.log(this.props.label);
-    }
-    else {
-
+    if (checked === true && props.label === '12-hour' ) {
+        const newClockValue = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: false});
+          updateClock(newClockValue);
     }
     if (checked === false && props.label === 'Seconds' ) {
         const newClockValue = new Date().toLocaleTimeString();
